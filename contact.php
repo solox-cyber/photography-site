@@ -76,17 +76,20 @@ http://www.tooplate.com/view/2094-mason
                     <div class="row margin-b-50">
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                             <h2 class="tm-section-title tm-blue-text">Contact Us</h2>
-                            <form action="#contact" method="post" class="contact-form">
+                            <form action="" method="post" class="contact-form">
                                 <div class="form-group">
-                                    <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name"  required/>
+                                    <input type="text" id="contact_name" name="userName" class="form-control" placeholder="Name"  required/>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email"  required/>
+                                    <input type="email" id="contact_email" name="userEmail" class="form-control" placeholder="Email"  required/>
                                 </div>
                                 <div class="form-group">
-                                    <textarea id="contact_message" name="contact_message" class="form-control" rows="9" placeholder="Message" required></textarea>
+                                    <input type="text" id="contact_subject" name="subject" class="form-control" placeholder="Email"  required/>
                                 </div>
-                                <button type="submit" class="btn btn-primary tm-button-rounded tm-button-orange tm-button-no-border tm-button-normal">Send</button>
+                                <div class="form-group">
+                                    <textarea id="contact_message" name="content" class="form-control" rows="9" placeholder="Message" required></textarea>
+                                </div>
+                                <button type="submit" name="send" class="btn btn-primary tm-button-rounded tm-button-orange tm-button-no-border tm-button-normal">Send</button>
                             </form>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
