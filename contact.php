@@ -50,11 +50,29 @@ http://www.tooplate.com/view/2094-mason
                 </nav>
             </div>
 
+
             <div class="tm-main-content">
                 <div class="tm-content-box tm-content-box-home">                        
                     <img src="img/1080x360-01.jpg" alt="Image" class="img-fluid tm-welcome-img">
                 </div>
                 <section id="contact" class="tm-content-box">
+                    
+            <?php
+            if(!empty($_POST["send"])) {
+                $name = $_POST["userName"];
+                $email = $_POST["userEmail"];
+                $subject = $_POST["subject"];
+                $content = $_POST["content"];
+            
+                $toEmail = "admin@phppot_samples.com";
+                $mailHeaders = "From: " . $name . "<". $email .">\r\n";
+                if(mail($toEmail, $subject, $content, $mailHeaders)) {
+                    $message = "Your contact information is received successfully.";
+                    $type = "success";
+                }
+            }
+            
+            ?>
                     <div class="row margin-b-50">
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                             <h2 class="tm-section-title tm-blue-text">Contact Us</h2>
